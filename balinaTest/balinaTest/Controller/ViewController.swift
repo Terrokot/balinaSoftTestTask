@@ -38,32 +38,14 @@ class ViewController: UIViewController {
             } catch {
                 print(error)
             }
-            
         }.resume()
     }
-//URL https://junior.balinasoft.com//api/v2/photo/type
+    
+    func postRequest() {
+        guard let url = URL(string: "https://junior.balinasoft.com/api/v2/photo") else { return }
+    }
 
 }
 
-extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        120
-    }
-    
-}
 
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModels.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! PhotoTypeTableViewCell
-        let vm = viewModels[indexPath.row]
-        cell.idLabel.text = "\(vm.id)"
-        cell.nameLabel.text = vm.name
-        return cell
-    }
-    
-    
-}
+
