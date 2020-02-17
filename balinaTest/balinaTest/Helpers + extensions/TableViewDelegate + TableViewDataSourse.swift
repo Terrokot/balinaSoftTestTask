@@ -17,10 +17,7 @@ extension ViewController: UITableViewDelegate {
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCell = indexPath.row - 1
         takePhoto()
-        
-        
     }
-    
 }
 
 

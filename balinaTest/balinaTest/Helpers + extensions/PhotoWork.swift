@@ -22,7 +22,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            postRequest(id: selectedCell, image: pickedImage)
+            NetworkManager.postRequest(id: selectedCell, image: pickedImage)
            }
            picker.dismiss(animated: true, completion: nil)
        }
