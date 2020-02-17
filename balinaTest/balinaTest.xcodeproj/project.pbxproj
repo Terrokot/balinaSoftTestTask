@@ -18,6 +18,7 @@
 		9106C3C223FB16F9004216C5 /* postImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C3C123FB16F9004216C5 /* postImageModel.swift */; };
 		9106C3C523FB1D8F004216C5 /* TableViewDelegate + TableViewDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C3C423FB1D8F004216C5 /* TableViewDelegate + TableViewDataSourse.swift */; };
 		9106C3CB23FB2377004216C5 /* PhotoWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C3CA23FB2377004216C5 /* PhotoWork.swift */; };
+		9106C3CD23FB31C3004216C5 /* ImageCompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C3CC23FB31C3004216C5 /* ImageCompression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9106C3C123FB16F9004216C5 /* postImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postImageModel.swift; sourceTree = "<group>"; };
 		9106C3C423FB1D8F004216C5 /* TableViewDelegate + TableViewDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewDelegate + TableViewDataSourse.swift"; sourceTree = "<group>"; };
 		9106C3CA23FB2377004216C5 /* PhotoWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWork.swift; sourceTree = "<group>"; };
+		9106C3CC23FB31C3004216C5 /* ImageCompression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				9106C3C423FB1D8F004216C5 /* TableViewDelegate + TableViewDataSourse.swift */,
 				9106C3CA23FB2377004216C5 /* PhotoWork.swift */,
+				9106C3CC23FB31C3004216C5 /* ImageCompression.swift */,
 			);
 			path = "Helpers + extensions";
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				9106C3A923FADED6004216C5 /* ViewController.swift in Sources */,
 				9106C3BC23FAE28C004216C5 /* photoTypes.swift in Sources */,
 				9106C3BE23FAE906004216C5 /* PhotoTypeTableViewCell.swift in Sources */,
+				9106C3CD23FB31C3004216C5 /* ImageCompression.swift in Sources */,
 				9106C3A523FADED6004216C5 /* AppDelegate.swift in Sources */,
 				9106C3C523FB1D8F004216C5 /* TableViewDelegate + TableViewDataSourse.swift in Sources */,
 				9106C3C223FB16F9004216C5 /* postImageModel.swift in Sources */,

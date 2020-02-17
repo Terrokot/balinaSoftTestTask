@@ -15,6 +15,7 @@ extension ViewController: UITableViewDelegate {
     }
     //MARK: TAP ON CELL
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCell = indexPath.row - 1
         takePhoto()
         
         
