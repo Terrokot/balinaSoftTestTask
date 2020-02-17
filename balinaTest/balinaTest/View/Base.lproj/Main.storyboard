@@ -26,8 +26,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="yyc-pb-9bG">
-                                                    <rect key="frame" x="30" y="11" width="374" height="72"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="yyc-pb-9bG">
+                                                    <rect key="frame" x="20" y="11" width="374" height="72"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id: 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPw-os-iwc">
                                                             <rect key="frame" x="0.0" y="0.0" width="112" height="72"/>

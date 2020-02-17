@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     func getRequest() {
         guard let url = URL(string: "https://junior.balinasoft.com//api/v2/photo/type") else { return }
         URLSession.shared.dataTask(with: url) {(data, responce, error) in
-            guard let responce = responce, let data = data else { return }
+            guard let _ = responce, let data = data else { return }
            // print(responce)
            // print(data)
             do {
