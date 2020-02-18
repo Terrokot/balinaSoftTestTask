@@ -11,37 +11,21 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-    
-    var viewModels: [PhotoTypeCellModel] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
-    var myPhoto: UIImage?
     var selectedCell = 0
-
+    
+    var viewModels: [PhotoTypeCellModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getRequest()
     }
     
     func getRequest() {
-        guard let url = URL(string: "https://junior.balinasoft.com//api/v2/photo/type") else { return }
-        URLSession.shared.dataTask(with: url) {(data, responce, error) in
-            guard let _ = responce, let data = data else { return }
-           // print(responce)
-           // print(data)
-            do {
-                let photoTypes = try JSONDecoder().decode(PhotoTypes.self, from: data)
-                print(photoTypes)
-                self.viewModels = photoTypes.content.compactMap(PhotoTypeCellModel.init)
-            } catch {
-                print(error)
+        NetworkManager.getRequest { (viewModels) in
+            self.viewModels = viewModels
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
-        }.resume()
+        }
     }
-
-
 }

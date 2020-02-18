@@ -11,6 +11,27 @@ import UIKit
 
 class NetworkManager {
     
+    
+    
+    static func getRequest(completion: @escaping (_ viewModels: [PhotoTypeCellModel]) -> ()) {
+           guard let url = URL(string: "https://junior.balinasoft.com//api/v2/photo/type") else { return }
+           URLSession.shared.dataTask(with: url) {(data, responce, error) in
+               guard let _ = responce, let data = data else { return }
+              // print(responce)
+              // print(data)
+               do {
+                   let photoTypes = try JSONDecoder().decode(PhotoTypes.self, from: data)
+                   print(photoTypes)
+                   let viewModels = photoTypes.content.compactMap(PhotoTypeCellModel.init)
+                    completion(viewModels)
+               } catch {
+                   print(error)
+               }
+           }.resume()
+       }
+    
+    
+    
     static func postRequest(id: Int, image: UIImage) {
         let data = ImageProperties(withImage: image, forKey: "photo")
         let semaphore = DispatchSemaphore (value: 0)
