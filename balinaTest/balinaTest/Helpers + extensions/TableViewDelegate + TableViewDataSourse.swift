@@ -18,11 +18,30 @@ extension ViewController: UITableViewDelegate {
         selectedCell = indexPath.row - 1
         takePhoto()
     }
+    //MARK: SCROLL
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+          let offSetY = scrollView.contentOffset.y
+          let contentHeight = scrollView.contentSize.height
+          
+          if offSetY > contentHeight - scrollView.frame.height {
+              if !fetchingMore {
+                  getRequest()
+                  print("fetch more data")
+              }
+          }
+      }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModels.count
+        
+        if section == 0 {
+            return viewModels.count
+        } else if section == 1 && fetchingMore {
+            return 1
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

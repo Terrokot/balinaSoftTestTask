@@ -13,8 +13,8 @@ class NetworkManager {
     
     
     
-    static func getRequest(completion: @escaping (_ viewModels: [PhotoTypeCellModel]) -> ()) {
-           guard let url = URL(string: "https://junior.balinasoft.com//api/v2/photo/type") else { return }
+    static func getRequest(page: Int, completion: @escaping (_ viewModels: [PhotoTypeCellModel]) -> ()) {
+           guard let url = URL(string: "https://junior.balinasoft.com//api/v2/photo/type?page=\(page)") else { return }
            URLSession.shared.dataTask(with: url) {(data, responce, error) in
                guard let _ = responce, let data = data else { return }
               // print(responce)
